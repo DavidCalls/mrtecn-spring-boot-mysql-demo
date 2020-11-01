@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <!--step1 定义spring-boot项目从parent repository 获取资源-->
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>2.1.4.RELEASE</version>
+        <!--  默认值为../pom.xml
+               查找顺序：relativePath元素中的地址–本地仓库–远程仓库
+              设定一个空值将始终从仓库中获取，不从本地路径获取。-->
+        <relativePath/>
+    </parent>
+    <!--step2 定义项目的ID-->
+    <groupId>com.mrtecn</groupId>
+    <artifactId>mrtecn-spring-boot-mysql-demo</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <name>mrtecn-spring-boot-mysql-demo</name>
+    <description>this is a demo project with DavidCalls,you can see in https://github.com/DavidCalls</description>
+    <!--step3 定义jdk版本-->
+    <properties>
+        <java.version>1.8</java.version>
+    </properties>
+
+
+    <dependencies>
+        <!--step4 定义starter-web依赖，不需要手动输入version，spring会自动提取依赖的包以及版本-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+        <!--step5 引入spring-boot-test-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+    <!--step6 引入maven打包组件-->
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </build>
+</project>
