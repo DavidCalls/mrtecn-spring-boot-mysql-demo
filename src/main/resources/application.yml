@@ -8,3 +8,8 @@ spring:
     username: root
     password: 1qaz@WSX#EDC
     driver-class-name: com.mysql.jdbc.Driver
+    #rabbitMq
+  rabbitmq:
+    addresses: ip:5672
+    username: guest
+    password: guest
